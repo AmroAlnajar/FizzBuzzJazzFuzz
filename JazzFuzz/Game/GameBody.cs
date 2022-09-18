@@ -20,8 +20,6 @@ public class GameBody : IGameBody
         GetWordsForAllNumbers()
             .ToList()
             .ForEach(x => Console.WriteLine(x));
-
-        Console.ReadKey();
     }
 
     public IEnumerable<string> GetWordsForAllNumbers()

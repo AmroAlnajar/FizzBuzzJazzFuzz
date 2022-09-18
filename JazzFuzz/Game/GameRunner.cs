@@ -8,6 +8,9 @@ public class GameRunner : IGameRunner
     {
         new GameBody(new FizzBuzzRuleSettings()).RunGame();
         new GameBody(new JazzFuzzRuleSettings()).RunGame();
+
+        Console.ReadLine();
+
     }
 
 }
