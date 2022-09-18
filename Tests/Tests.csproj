@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FizzBuzz\FizzBuzz.csproj" />
+    <ProjectReference Include="..\JazzFuzz\JazzFuzz.csproj" />
   </ItemGroup>
 
 </Project>
