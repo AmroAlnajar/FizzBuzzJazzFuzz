@@ -3,23 +3,16 @@ using JazzFuzz.RuleSettings;
 
 namespace JazzFuzz.Game;
 
-public class GameBody : IGameBody
+public class GameLogic : IGameLogic
 {
     private readonly IGameRuleSettings _ruleSettings;
 
     private readonly IEnumerable<int> rangeToRunOn;
 
-    public GameBody(IGameRuleSettings ruleSettings)
+    public GameLogic(IGameRuleSettings ruleSettings)
     {
         _ruleSettings = ruleSettings;
-        rangeToRunOn = _ruleSettings.GetRuleSettings().RuleRange;
-    }
-
-    public void RunGame()
-    { 
-        GetWordsForAllNumbers()
-            .ToList()
-            .ForEach(x => Console.WriteLine(x));
+        rangeToRunOn = _ruleSettings.RuleRange;
     }
 
     public IEnumerable<string> GetWordsForAllNumbers()
@@ -31,7 +24,7 @@ public class GameBody : IGameBody
     {
         var correspondingWord = string.Empty;
 
-        var gameRules = _ruleSettings.GetRuleSettings().RuleWords.Select(x => new GameRules(x));
+        var gameRules = _ruleSettings.RuleWords.Select(x => new GameRules(x));
 
         foreach (var rule in gameRules)
         {
