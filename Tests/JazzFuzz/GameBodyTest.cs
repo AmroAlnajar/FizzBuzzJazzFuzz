@@ -8,11 +8,11 @@ namespace Tests.JazzFuzz
     public class GameBodyTest
     {
 
-        private readonly GameBody _gameBody;
+        private readonly GameLogic _gameBody;
 
         public GameBodyTest()
         {
-            _gameBody = new GameBody(new JazzFuzzRuleSettings());
+            _gameBody = new GameLogic(new JazzFuzzRuleSettings());
         }
 
         [Fact]

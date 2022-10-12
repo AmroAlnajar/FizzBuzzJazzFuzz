@@ -1,16 +1,16 @@
-﻿using JazzFuzz.RuleSettings;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace JazzFuzz.Game;
-
-public class GameRunner : IGameRunner
+namespace JazzFuzz.Game
 {
-    public void Run()
+    public class GameRunner
     {
-        new GameBody(new FizzBuzzRuleSettings()).RunGame();
-        new GameBody(new JazzFuzzRuleSettings()).RunGame();
+        public void Run()
+        {
 
-        Console.ReadLine();
-
+        }
     }
-
 }
